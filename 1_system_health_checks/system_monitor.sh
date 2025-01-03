@@ -18,7 +18,7 @@ check_disk_usage() {
     cat $REPORT_FILE
 }
 
-#function to monitor services using systemctl
+# function to monitor services using systemctl
 monitor_services() {
     echo "=== running services ===" >> $REPORT_FILE
     systemctl list-units --type=service --state=running >> $REPORT_FILE
