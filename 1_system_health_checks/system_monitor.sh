@@ -2,7 +2,7 @@
 
 # enable debug mode
 DEBUG=true
-if [[ $DEBUG -eq true ]]; then 
+if [[ $DEBUG == true ]]; then 
     echo "$DEBUG"
     set -x
 fi
@@ -55,9 +55,9 @@ main() {
         echo "6. Exit"
         echo "==============================="
 
-        read -p "Enter your choice: (1-6)" choice
+        read -p "Enter your choice: (1-6) " choice
 
-        switch $choice in 
+        case $choice in 
             1)
                 check_disk_usage
                 ;;
@@ -83,5 +83,4 @@ main() {
     done
 }
 
-
-    
+main
